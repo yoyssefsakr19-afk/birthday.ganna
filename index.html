@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Special Ganna ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+    <div class="floating-hearts" id="hearts"></div>
+
+    <!-- شاشة الترحيب -->
+    <section class="welcome-screen" id="welcome">
+        <div class="welcome-heart">💗</div>
+        <p class="english-title">A LITTLE SURPRISE FOR YOU</p>
+        <h1>كل سنة وانتي طيبة يا جنجووووون</h1>
+        <p>في مفاجأة صغيرة مستنياكي... ❤️</p>
+        <button id="startBtn">افتحي المفاجأة ✨</button>
+    </section>
+
+    <!-- محتوى الموقع -->
+    <main id="mainContent" class="hidden">
+
+        <!-- التهنئة -->
+        <section class="hero section">
+            <span class="sparkle">✨ ✨ ✨</span>
+            <p class="english-title">HAPPY BIRTHDAY</p>
+            <h1>Happy Birthday Ganna</h1>
+            <h2>كل سنة وانتي أجمل وأطيب جنة ❤️</h2>
+            <p>النهارده احلي يوم عشان جنجون جات الدنيا فيه ومن يومها والدنيا منوره.</p>
+        </section>
+
+        <!-- الرسالة -->
+        <section class="letter section">
+            <div class="glass-card">
+                <span class="section-icon">💌</span>
+                <h2>رسالة ليكي</h2>
+                <p>
+                    كل سنه وانتي طيبه يجنجوني وتحققي كل الي بتحلمي بيه واشوفك انجح واشطر واحده في الدنيا
+                    وربنا يخليكي وتفضلي موجودة دايمًا ونفضل نتكلم كل يوم ونتكلم كتير وطول اليوم
+                    مع اني مش بتكلم كتير هقهقهقهقهق بس ببقا مبسوط وانتي بتتكلمي وبتحكي يومك والي حصل 
+                    ببقا مبسوط وانا بسمعك وربنا يخليكي تفضلي موجودة دايمًا وتحكيلي ونتكلم مبسوط اوي اني عرفتك وحابب وجودك اوييييييي
+                    وربنا يخليكي وتفضلي موجودة كل يوم وكل ساعه وكل دقيقه وكل ثانيه مطمن وانتي جنبي ومعايا وبجد شكرا انك بتهوني عليا وتحولي تطمنيني وتهديني ديما رغم اني بتكلم في نفس المشكله كل مره وانتي برضو بتطمنيني وبجد تسلمي وربنا يخليكي وتطمنيني ديما قلبي يجنجوووووون  ❤️
+                </p>
+            </div>
+        </section>
+
+        <!-- معرض الصور -->
+        <section class="gallery section">
+            <h2>لحظات جميلة 📸</h2>
+            <p>صور تستاهل تفضل موجودة دايمًا</p>
+
+            <div class="gallery-grid">
+
+           <img src="media/photo1.jpg" alt="صورة جنة">
+
+           <img src="media/photo2.jpg" alt="صورة جميلة">
+
+           <img src="media/photo3.jpg" alt="ذكرى جميلة">
+
+
+            </div>
+        </section>
+
+        <!-- الذكريات -->
+        <section class="memories section">
+            <h2>ذكرياتنا الحلوة 💖</h2>
+            <p>اضغطي على كل ذكرى عشان تكتشفي اللي جواها</p>
+
+            <div class="memory-list">
+                <details class="memory-card">
+                    <summary>🌸 أول ذكرى</summary>
+                    <p>اول مره دخلنا نلعب ببجي سوا لما بعتلك ودخلنا لعبنا كان احلي يوم .</p>
+                </details>
+
+                <details class="memory-card">
+                    <summary>✨ ذكرى مميزة</summary>
+                    <p>عمري ما هنسي قد ايه كنتي جنبي كل يوم وكل وققت وفي الاوقات الي ببقا متضايق فيها وكنتي بتفضلي معايا وتفضلي تطمنيني مبسوط بوجودك اوييي.</p>
+                </details>
+
+                <details class="memory-card">
+                    <summary>💫 ضحكة مش هتتنسي</summary>
+                    <p>.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- الأغنية -->
+        <section class="music section">
+            <div class="glass-card">
+                <span class="section-icon">🎵</span>
+                <h2>أغنية مخصوص ليكي</h2>
+                <p>احلي اغنيه لجنجونييييى</p>
+                <audio controls>
+
+               <source src="media/song.mp3" type="audio/mpeg">   
+                </audio>
+                
+            </div>
+        </section>
+
+        <!-- المفاجأة الصينية -->
+        <section class="chinese section">
+            <div class="glass-card">
+                <h2>رسالة صغيرة بلغة مختلفة 🀄</h2>
+                <p class="chinese-text">生日快乐</p>
+                <p>معناها: عيد ميلاد سعيد يا جنة ❤️</p>
+                <button id="chineseBtn">اكتشفي الرسالة ✨</button>
+                <p id="chineseMessage" class="hidden">
+                    亲爱的珍娜，生日快乐！🎂❤️
+
+愿你的新一岁充满幸福、快乐和美好的惊喜。愿你的笑容永远灿烂，愿所有美好的事情都如期而至。希望你每天都被爱包围，永远闪闪发光，做自己喜欢的事，成为自己想成为的人。
+
+愿你的未来比星星还要闪耀，愿你的每一天都值得期待！生日快乐，我美丽的女孩！❤️✨
+                    <br>
+                    أتمنى لك السعادة كل يوم 🌸
+                </p>
+            </div>
+        </section>
+
+        <!-- التورتة والشموع -->
+        <section class="cake-section section">
+            <h2>يلا نتمنى أمنية 🎂</h2>
+            <p>خدي نفس عميق واطفي الشموع!</p>
+
+            <div class="cake-area">
+                <div class="candles" id="candles">
+                    <span class="candle"><i></i></span>
+                    <span class="candle"><i></i></span>
+                    <span class="candle"><i></i></span>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-body"></div>
+                <div class="cake-plate"></div>
+            </div>
+
+            <button id="blowBtn">اطفي الشموع 🕯️</button>
+            <p id="wishMessage"></p>
+        </section>
+
+        <!-- النهاية -->
+        <section class="final section">
+            <div class="glass-card">
+                <span class="section-icon">❤️</span>
+                <h2>وفي النهاية...</h2>
+                <p>
+                    مهما اتقال في عيد ميلادك، مش هيكفي يوصف
+                    قد إيه أتمنى لك أيام جميلة وسعيدة.
+                </p>
+                <h2>كل سنة وانتي طيبة يا جنجون 🎂</h2>
+                <button id="celebrateBtn">احتفلي بقى 🎉</button>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="lightbox" class="lightbox hidden">
+        <button id="closeLightbox">✕</button>
+        <img id="lightboxImage" src="" alt="صورة مكبرة">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

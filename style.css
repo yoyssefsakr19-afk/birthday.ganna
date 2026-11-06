@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #10091f, #26102f, #160d2a);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* خلفية النجوم */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .65;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(2px 2px at 70% 20%, #ffd6e7, transparent),
+        radial-gradient(2px 2px at 40% 80%, #fff, transparent),
+        radial-gradient(2px 2px at 90% 60%, #ffd6e7, transparent),
+        radial-gradient(2px 2px at 10% 90%, #fff, transparent);
+    background-size: 250px 250px;
+    animation: starsMove 15s linear infinite;
+}
+
+@keyframes starsMove {
+    to { transform: translateY(-150px); }
+}
+
+/* القلوب */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* شاشة البداية */
+
+.welcome-screen {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background:
+        radial-gradient(circle at center, rgba(160, 65, 140, .2), transparent 60%);
+    animation: fadeIn 1.5s ease;
+}
+
+.welcome-heart {
+    font-size: 85px;
+    margin-bottom: 15px;
+    animation: heartbeat 1.5s infinite;
+    filter: drop-shadow(0 0 25px #ff5ca8);
+}
+
+.english-title {
+    color: #ffd18c;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.welcome-screen h1 {
+    color: #ffd6e7;
+    font-size: clamp(30px, 6vw, 55px);
+    margin-bottom: 15px;
+    text-shadow: 0 0 25px #ff5ca866;
+}
+
+.welcome-screen p:not(.english-title) {
+    color: #e8d7ed;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* الأزرار */
+
+button {
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 13px 30px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff5ca8, #a64bd4);
+    box-shadow: 0 0 25px #ff5ca855;
+    cursor: pointer;
+    transition: .35s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 35px #ff5ca899;
+}
+
+/* المحتوى */
+
+.hidden {
+    display: none !important;
+}
+
+#mainContent {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease;
+}
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 65px 20px;
+}
+
+.section h2 {
+    color: #ffd6e7;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section p {
+    color: #eaddeb;
+    line-height: 2;
+}
+
+.hero {
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 7vw, 65px);
+    color: #ffd6e7;
+    text-shadow: 0 0 30px #ff5ca877;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-size: 23px;
+}
+
+.sparkle {
+    font-size: 30px;
+    animation: heartbeat 2s infinite;
+}
+
+/* الكروت الزجاجية */
+
+.glass-card {
+    background: rgba(255,255,255,.075);
+    border: 1px solid rgba(255, 190, 220, .35);
+    border-radius: 28px;
+    padding: 35px 25px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.2);
+    backdrop-filter: blur(12px);
+    max-width: 750px;
+    margin: auto;
+}
+
+.section-icon {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* الصور */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 2px solid #ffb6d5;
+    box-shadow: 0 10px 30px #ff5ca822;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px #ff5ca855;
+}
+
+/* الذكريات */
+
+.memory-list {
+    max-width: 650px;
+    margin: 30px auto 0;
+}
+
+.memory-card {
+    background: rgba(255,255,255,.08);
+    border: 1px solid #ffb6d566;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+    text-align: right;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.memory-card:hover,
+.memory-card[open] {
+    background: rgba(255,92,168,.16);
+    border-color: #ffb6d5;
+}
+
+.memory-card summary {
+    color: #ffd6e7;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.memory-card p {
+    padding-top: 15px;
+}
+
+/* الموسيقى */
+
+.music audio {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 25px;
+}
+
+/* الرسالة الصينية */
+
+.chinese-text {
+    font-size: 38px;
+    color: #ffd18c !important;
+    margin: 15px 0;
+}
+
+#chineseMessage {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* التورتة */
+
+.cake-area {
+    width: 250px;
+    height: 220px;
+    margin: 45px auto 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cake-body {
+    width: 220px;
+    height: 95px;
+    background: linear-gradient(90deg, #a94376, #f5a1c5, #a94376);
+    border-radius: 15px 15px 25px 25px;
+    box-shadow: 0 10px 25px #ff5ca855;
+    position: relative;
+}
+
+.cake-body::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #ffe0ed;
+    border-radius: 50%;
+}
+
+.cake-top {
+    width: 220px;
+    height: 35px;
+    background: #ffcae0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 80px;
+    z-index: 2;
+}
+
+.cake-plate {
+    width: 260px;
+    height: 15px;
+    background: linear-gradient(#fff0f7, #c48aa9);
+    border-radius: 50%;
+}
+
+.candles {
+    position: absolute;
+    bottom: 175px;
+    display: flex;
+    gap: 22px;
+    z-index: 4;
+}
+
+.candle {
+    width: 10px;
+    height: 43px;
+    background: repeating-linear-gradient(
+        45deg, #fff, #fff 5px, #ff7ab8 5px, #ff7ab8 10px
+    );
+    border-radius: 4px;
+    position: relative;
+}
+
+.candle i {
+    position: absolute;
+    width: 13px;
+    height: 20px;
+    background: radial-gradient(ellipse at 50% 70%, #fff5a0, #ff9c28, #ff4d1c);
+    border-radius: 50% 50% 45% 45%;
+    top: -23px;
+    left: -1px;
+    filter: drop-shadow(0 0 9px #ffb52e);
+    animation: flame 0.7s infinite alternate;
+}
+
+.candles.blown .candle i {
+    display: none;
+}
+
+@keyframes flame {
+    from { transform: scale(1) rotate(-5deg); }
+    to { transform: scale(1.15) rotate(5deg); }
+}
+
+#wishMessage {
+    margin-top: 25px;
+    color: #ffd18c;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* النهاية */
+
+.final {
+    padding-bottom: 100px;
+}
+
+/* الصور المكبرة */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(10,5,20,.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 20px;
+    border: 2px solid #ffb6d5;
+}
+
+#closeLightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 18px;
+}
+
+/* الحركات */
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.heart-particle {
+    position: fixed;
+    bottom: -40px;
+    font-size: 24px;
+    animation: floatUp 5s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* الموبايل */
+
+@media (max-width: 650px) {
+    .section {
+        padding: 45px 15px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 300px;
+    }
+
+    .glass-card {
+        padding: 25px 18px;
+    }
+
+    .hero {
+        min-height: 380px;
+    }
+}
+/* Smoke effect after blowing candles */
+.smoke {
+    position: absolute;
+    width: 12px;
+    height: 35px;
+    background: linear-gradient(
+        to top,
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0)
+    );
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: smokeRise 2s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes smokeRise {
+    0% {
+        opacity: 0.8;
+        transform: translateY(0) scale(0.5);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-35px) translateX(8px) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-75px) translateX(-8px) scale(2);
+    }
+}
